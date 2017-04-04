@@ -1,6 +1,5 @@
 package edu.iis.mto.time;
 
-
 import org.junit.Test;
 
 public class Tests {

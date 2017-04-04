@@ -3,9 +3,6 @@ package edu.iis.mto.time;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.joda.time.DateTime;
-import org.joda.time.Hours;
-
 public class Order {
 	private static final int VALID_PERIOD_HOURS = 24;
 	private State orderState;

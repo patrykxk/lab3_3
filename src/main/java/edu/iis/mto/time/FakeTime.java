@@ -1,8 +1,5 @@
 package edu.iis.mto.time;
 
-import org.joda.time.DateTime;
-
-
 public class FakeTime {
     private static final long TWENTY_FIVE_HOURS = 25*60*60*1000;
 
