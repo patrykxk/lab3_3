@@ -1,6 +1,10 @@
 package edu.iis.mto.time;
 
+import org.junit.Assert;
 import org.junit.Test;
+
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.core.IsEqual.equalTo;
 
 public class Tests {
 
@@ -9,5 +13,12 @@ public class Tests {
         Order order = new Order();
         order.submit();
         order.confirm();
+    }
+    @Test(expected = OrderExpiredException.class)
+    public void orderExpiredAndCanceled(){
+        Order order = new Order();
+        order.submit();
+        order.confirm();
+        Assert.assertThat(order.getOrderState(),is(equalTo(Order.State.CANCELLED)));
     }
 }
